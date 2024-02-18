@@ -1,0 +1,54 @@
+label look
+2
+reg0_to_out
+in_to_reg3
+move
+cond_eq_0
+
+#if not empty, look left
+0
+reg0_to_out
+in_to_reg3
+move
+cond_eq_0
+
+#still not empty, one option remains
+#otherwise dead end
+0
+reg0_to_out
+in_to_reg3
+move
+cond_eq_0
+
+#in a dead end
+0
+reg0_to_out
+
+label move
+1
+reg0_to_out
+check_for_door
+cond_eq_0
+
+label check_for_door
+4
+reg0_to_out
+0
+reg0_to_out
+4
+reg0_to_out
+0
+reg0_to_out
+4
+reg0_to_out
+0
+reg0_to_out
+4
+reg0_to_out
+0
+reg0_to_out
+
+reg0_to_reg3
+look
+cond_eq_0
+
